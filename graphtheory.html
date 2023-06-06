@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="topic-pages.css">
+        <link rel="stylesheet" href="buttons.css">
+        <title>Graph Theory</title>
+    </head>
+    <body>
+        <div class="nav">
+            <a href="./index.html">
+                <button>Home</button>
+            </a>
+
+            <a href="./graphtheory.html">
+                <button>Graph Theory</button>
+            </a>
+
+            <a href="./sorting.html">
+                <button>Sorting</button>
+            </a>
+
+            <a href="./dp.html">
+                <button>Dynamic Programming</button>
+            </a>
+
+            <a href="./compiler.html">
+                <button>Java Compiler</button>
+            </a>
+        </div>
+
+        <h1>Graph Theory</h1>
+        <h2>This page contains links to three Graph Theory algorithms I coded in Java as well</h2>
+        <h2>as a Java program that contains all three algorithms into one</h2>
+
+        <div class="topic-page-main-container">
+            <div class="topic-page-algorithm">
+                <div class="topic-page-algorithm-title">
+                    <h4>Dijkstra's Algorithm</h4>
+                    <div class="subsection-buttons">
+                        <a href="./pages-graphtheory/page-dijkstra.html">
+                            <button class="page-button">Page</button>
+                        </a>
+                        <a href="./downloads-graphtheory/Dijkstra.java" download>
+                            <button class="download-button">Download</button>
+                        </a>
+                        <a href="./downloads-graphtheory/Dijkstra.java">
+                            <button class="code-text-button">Code as text</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="topic-page-algorithm-description">
+                    <h4>Description</h4>
+                    <p>Given a graph in the form of an adjacency matrix, an integer representing the number of nodes
+                        in the graph, and an integer representing the starting node, will find the shortest path distance
+                        between the starting node and every other node in the graph. It is important to note that this
+                        algorithm can not handle negative edge weights.
+                    </p>
+
+                    <p>First a distance array and a visted array are created. The distance array represents the current known
+                        shortest distance from the starting node to every other node where each index represents node in the graph.
+                        The distance array is first initialized to INFINITY except for the index representing the starting node which
+                        is initialized to 0.
+                    </p>
+
+                    <p>
+                        The visited array is a boolean array that represents where a node in the graph has been visted yet. The visted
+                        array is first initialized to false except for the index representing the starting node which is initialized
+                        to true.
+                    </p>
+
+                    <p>It then looks at the nodes adjacent to the current node and compares which one has the smallest edge weight.
+                        The node with the smallest edge weight is then considered visited and the total distance from the starting node
+                        to this node is the gurenteed smallest path for this node. 
+                    </p>
+
+                    <p>This process then repeats by looking at the nodes adjacent to the current node until all the nodes are considered visted.
+                        Sometimes nodes in a graph are inpossible to reach, therefore their distance will always be considered infinity.
+                    </p>
+                </div>
+            </div>
+
+            <div class="topic-page-algorithm">
+                <div class="topic-page-algorithm-title">
+                    <h4>Bellman-Ford Algorithm</h4>
+                    <div class="subsection-buttons">
+                        <a href="./pages-graphtheory/pages-bellmanford.html">
+                            <button class="page-button">Page</button>
+                        </a>
+                        <a href="./downloads-graphtheory/BellmanFord.java" download>
+                            <button class="download-button">Download</button>
+                        </a>
+                        <a href="./downloads-graphtheory/BellmanFord.java">
+                            <button class="code-text-button">Code as text</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="topic-page-algorithm-description">
+                    <h4>Description</h4>
+                    <p>Given a graph in the form of an adjacency matrix, an integer representing the number of nodes
+                        in the graph, and an integer representing the starting node, will find the shortest path distance
+                        between the starting node and every other node in the graph. It is important to note that this
+                        algorithm can handle negative edge weights but not negative cycles.
+                    </p>
+
+                    <p>First a distance array is created. The distance array represents the current known
+                        shortest distance from the starting node to every other node where each index represents node in the graph.
+                        The distance array is first initialized to INFINITY except for the index representing the starting node which
+                        is initialized to 0.
+                    </p>
+
+                    <p>Then the algorithm loops through each pair of adjacent nodes (one iteration) with a shared edge and sees if those nodes'
+                        current shortest distance can be updated to a smaller value. 
+                    </p>
+
+                    <p>The algorithm repeats this process until an iteration makes no updates to the distance array or loops at a fixed
+                        (number of nodes - 1) number of iterations (my implementation) as this algorithm should conclude after (number of nodes - 1)
+                        iterations if it is a valid graph and there are no negative cycles.
+                    </p>
+
+                    <p>Note that is it common to implement a negative cycle checker by seeing if the distance array still updates after Bellman-Ford
+                        completes (number of nodes - 1) iterations.
+                    </p>
+                </div>
+            </div>
+
+            <div class="topic-page-algorithm">
+                <div class="topic-page-algorithm-title">
+                    <h4>Floyd-Warshall Algorithm</h4>
+                    <div class="subsection-buttons">
+                        <a href="./pages-graphtheory/pages-floydwarshall.html">
+                            <button class="page-button">Page</button>
+                        </a>
+                        <a href="./downloads-graphtheory/FloydWarshall.java" download>
+                            <button class="download-button">Download</button>
+                        </a>
+                        <a href="./downloads-graphtheory/FloydWarshall.java">
+                            <button class="code-text-button">Code as text</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="topic-page-algorithm-description">
+                    <h4>Description</h4>
+                    <p>Given a graph in the form of an adjacency matrix and integer representing the number of nodes
+                        in the graph, will find the shortest path distance between the every pair of nodes in the graph. 
+                        It is important to note that this algorithm can handle negative edge weights but not negative cycles.
+                    </p>
+
+                    <p>First a distance matrix of size number of nodes by size number of nodes (same size as adjacency matrix)
+                        is initalized with the content in the given adjacency matrix.
+                    </p>
+
+                    <p>
+                        It then considers for each pair of nodes <b>i</b> and <b>j</b>, if the distance between <b>i</b> and <b>j</b> is decreased 
+                        when using itermediate nodes 1 through <b>k</b>, the distance array representing the distance between <b>i</b> and <b>j</b>
+                        should be updated to the new shorter distance value.
+                    </p>
+
+                    <p>The algorithm concludes when <b>k</b> represents all possible itermediate nodes in the graph.
+                    </p>
+                </div>
+            </div>
+
+            <div class="topic-page-algorithm">
+                <div class="topic-page-algorithm-title">
+                    <h4>All Graph Theory Algorithms</h4>
+                    <div class="subsection-buttons">
+                        <a href="./pages-graphtheory/pages-allgraphtheory.html">
+                            <button class="page-button">Page</button>
+                        </a>
+                        <a href="./downloads-graphtheory/AllGraphAlgorithms.java" download>
+                            <button class="download-button">Download</button>
+                        </a>
+                        <a href="./downloads-graphtheory/AllGraphAlgorithms.java">
+                            <button class="code-text-button">Code as text</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="topic-page-algorithm-description">
+                    <h4>Description</h4>
+                    <p>Given a graph in the form of an adjacency matrix, an integer representing the number of nodes
+                        in the graph, an integer representing the starting node, and an integer representing which
+                        graph theory algorithm to perform, will perform that algorithm onto the graph.
+                    </p>
+
+                    <p>The options for graph theory algothims are: Dijkstra's Algorithm, Bellman-Ford Algorithm, and
+                        Floyd-Warshall Algorithm.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

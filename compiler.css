@@ -1,0 +1,11 @@
+.compiler-container
+{
+    display: flex;
+    justify-content: center;
+}
+
+.compiler
+{
+    margin-top: 100px;
+    width: 1800px;
+}

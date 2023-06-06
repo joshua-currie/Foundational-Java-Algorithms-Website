@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="topic-pages.css">
+        <link rel="stylesheet" href="buttons.css">
+        <title>Sorting</title>
+    </head>
+    <body>
+        <div class="nav">
+            <a href="./index.html">
+                <button>Home</button>
+            </a>
+
+            <a href="./graphtheory.html">
+                <button>Graph Theory</button>
+            </a>
+
+            <a href="./sorting.html">
+                <button>Sorting</button>
+            </a>
+
+            <a href="./dp.html">
+                <button>Dynamic Programming</button>
+            </a>
+
+            <a href="./compiler.html">
+                <button>Java Compiler</button>
+            </a>
+        </div>
+
+        <h1>Sorting Algorithms</h1>
+        <h2>This page contains links to six sorting algorithms I coded in Java as well</h2>
+        <h2>as a Java program that contains all six algorithms into one</h2>
+
+        <div class="topic-page-main-container">
+            <div class="topic-page-algorithm">
+                <div class="topic-page-algorithm-title">
+                    <h4>Bubble Sort</h4>
+                    <div class="subsection-buttons">
+                        <a href="./pages-sorting/pages-bubblesort.html">
+                            <button class="page-button">Page</button>
+                        </a>
+                        <a href="./downloads-sorting/BubbleSort.java" download>
+                            <button class="download-button">Download</button>
+                        </a>
+                        <a href="./downloads-sorting/BubbleSort.java">
+                            <button class="code-text-button">Code as text</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="topic-page-algorithm-description">
+                    <h4>Description</h4>
+                    <p>Given an array of integers, will sort the array by iterating through the given array
+                        repeatedly and swap adjacent elements if they are in the wrong order. 
+                    </p>
+
+                    <p>After every iteration, the size of the array looked at by bubble sort is decreased by one
+                        element as each iteration gurentees that one additional element located towards the end of
+                        array is in the proper position.
+                    </p>
+                </div>
+            </div>
+
+            <div class="topic-page-algorithm">
+                <div class="topic-page-algorithm-title">
+                    <h4>Bucket Sort</h4>
+                    <div class="subsection-buttons">
+                        <a href="./pages-sorting/pages-bucketsort.html">
+                            <button class="page-button">Page</button>
+                        </a>
+                        <a href="./downloads-sorting/BucketSort.java" download>
+                            <button class="download-button">Download</button>
+                        </a>
+                        <a href="./downloads-sorting/BucketSort.java">
+                            <button class="code-text-button">Code as text</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="topic-page-algorithm-description">
+                    <h4>Description</h4>
+                    <p>Given an array of integers, will sort the array by first finding the largest
+                        integer and then create a separate integer array that is initialized to 0
+                        with size of the largest integer. 
+                    </p>
+
+                    <p>Then loop through each integer in the given array and increment the integer in the
+                        created array at the index that represents it.
+                    </p>
+
+                    <p>Finally, iterate through the created array from smallest index to largest index, checking
+                        if that index contains a number that is not 0. If so, then add the number with represented
+                        by that index on to our sorted list array and decrement the number at the index.
+                    </p>
+                </div>
+            </div>
+
+            <div class="topic-page-algorithm">
+                <div class="topic-page-algorithm-title">
+                    <h4>Insertion Sort</h4>
+                    <div class="subsection-buttons">
+                        <a href="./pages-sorting/pages-insertionsort.html">
+                            <button class="page-button">Page</button>
+                        </a>
+                        <a href="./downloads-sorting/InsertionSort.java" download>
+                            <button class="download-button">Download</button>
+                        </a>
+                        <a href="./downloads-sorting/InsertionSort.java">
+                            <button class="code-text-button">Code as text</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="topic-page-algorithm-description">
+                    <h4>Description</h4>
+                    <p>Given an array of integers, will sort the array by iterating though the array and building
+                        up to the final sorted version of the array one element per iteration.
+                    </p>
+
+                    <p>Insertion sort first looks at the second element in the array and compares its position to the
+                        first element. If they are not in the correct position then swap the two elements. At this point,
+                        the first two elements of the array are sorted.
+                    </p>
+
+                    <p>Insertion sort then looks at the next element in the array and places its position in the already sorted
+                        portion of the array, incrementing the size of the sorted section of the array by one. This process
+                        repeats until the entire array is sorted.
+                    </p>
+                </div>
+            </div>
+
+            <div class="topic-page-algorithm">
+                <div class="topic-page-algorithm-title">
+                    <h4>Selection Sort</h4>
+                    <div class="subsection-buttons">
+                        <a href="./pages-sorting/pages-selectionsort.html">
+                            <button class="page-button">Page</button>
+                        </a>
+                        <a href="./downloads-sorting/SelectionSort.java" download>
+                            <button class="download-button">Download</button>
+                        </a>
+                        <a href="./downloads-sorting/SelectionSort.java">
+                            <button class="code-text-button">Code as text</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="topic-page-algorithm-description">
+                    <h4>Description</h4>
+                    <p>Given an array of integers, will sort the array by iterating though the array and building
+                        up to the final sorted version of the array one element per iteration.
+                    </p>
+
+                    <p>Selection sort first iterates through the entire array to find the smallest array element and
+                        then swaps that element with the element located at index 0. Now the element at index 0 is
+                        in the right place.
+                    </p>
+
+                    <p>Then it iterates through the entire array again to find the smallest array element but
+                        ignories the element at index 0. After finding it, swaps the element with the element at index 1.
+                    </p>
+
+                    <p>This process of building up the sorted array from finding the smallest element to the largest element
+                        is repeated until the array is fully sorted.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="topic-page-algorithm">
+                <div class="topic-page-algorithm-title">
+                    <h4>Merge Sort</h4>
+                    <div class="subsection-buttons">
+                        <a href="./pages-sorting/pages-mergesort.html">
+                            <button class="page-button">Page</button>
+                        </a>
+                        <a href="./downloads-sorting/MergeSort.java" download>
+                            <button class="download-button">Download</button>
+                        </a>
+                        <a href="./downloads-sorting/MergeSort.java">
+                            <button class="code-text-button">Code as text</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="topic-page-algorithm-description">
+                    <h4>Description</h4>
+                    <p>Given an array of integers, will sort the array by dividing the array into smaller arrays,
+                        sorting those arrays individually, and recombining the sorted arrays to form the complete
+                        sorted array.
+                    </p>
+
+                    <p>Merge sort first recursively divides the given array into smaller halves until all the sub-arrays
+                        are of size 1. Afterwards, the sub-arrays are then merged together to sub-arrays of size 2 by
+                        comparing the first (and currently only) elements in the subarrays and merging them together in
+                        sorted order.
+                    </p>
+
+                    <p>This process of looking and comparing the first elements of the sub-arrays in question to merge
+                        the two sub-arrays into one array is repeated until all the sub-arrays are finally merged back
+                        into one array.
+                    </p>
+                </div>
+            </div>
+
+            <div class="topic-page-algorithm">
+                <div class="topic-page-algorithm-title">
+                    <h4>Quicksort</h4>
+                    <div class="subsection-buttons">
+                        <a href="./pages-sorting/pages-quicksort.html">
+                            <button class="page-button">Page</button>
+                        </a>
+                        <a href="./downloads-sorting/QuickSort.java" download>
+                            <button class="download-button">Download</button>
+                        </a>
+                        <a href="./downloads-sorting/QuickSort.java">
+                            <button class="code-text-button">Code as text</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="topic-page-algorithm-description">
+                    <h4>Description</h4>
+                    <p>Given an array of integers, will sort the array by first selecting an element to be the pivot.
+                        Then the array is partitioned into two sub-arrays, where one sub-array contains only the elements
+                        that are smaller than the pivot element, and the other sub-array contains only the elements that
+                        are larger than the pivot element.
+                    </p>
+
+                    <p>This process is then recursively repeated in the sub-arrays by selecting a pivot in each sub-array and dividing
+                        each sub-array into more sub-arrays until the sub-arrays are of size one. 
+                    </p>
+
+                    <p>The sub-arrays are then combined back together until there is only one array.
+                    </p>
+                </div>
+            </div>
+
+            <div class="topic-page-algorithm">
+                <div class="topic-page-algorithm-title">
+                    <h4>All Sorting Algorithms</h4>
+                    <div class="subsection-buttons">
+                        <a href="./pages-sorting/pages-allsorts.html">
+                            <button class="page-button">Page</button>
+                        </a>
+                        <a href="./downloads-sorting/AllSorts.java" download>
+                            <button class="download-button">Download</button>
+                        </a>
+                        <a href="./downloads-sorting/AllSorts.java">
+                            <button class="code-text-button">Code as text</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="topic-page-algorithm-description">
+                    <h4>Description</h4>
+                    <p>Given an array of integers and an integer representing which sorting algorithm to perform,
+                        will sort the array using the selected method.
+                    </p>
+
+                    <p>The options for sorting algothims are: Bubble sort, Bucket sort, Insertion sort, Selection sort,
+                        Merge sort, and Quicksort.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

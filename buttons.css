@@ -1,0 +1,47 @@
+.page-button,
+.download-button,
+.code-text-button
+{
+    color: aliceblue;
+    border: 0;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.page-button
+{
+    background-color: rgb(226, 40, 40);
+}
+
+.download-button
+{
+    background-color: rgb(144, 68, 214);
+}
+
+.code-text-button
+{
+    background-color: rgb(102, 54, 192);
+}
+
+.page-button:hover,
+.download-button:hover,
+.code-text-button:hover
+{
+    cursor: pointer;
+}
+
+.page-button:hover
+{
+    background-color: rgb(224, 84, 84);
+}
+
+.download-button:hover
+{
+    background-color: rgb(157, 103, 207);
+}
+
+.code-text-button:hover
+{
+    background-color: rgb(130, 95, 196);
+}

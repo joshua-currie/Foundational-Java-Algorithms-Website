@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../nav.css">
+        <link rel="stylesheet" href="../page-compiler.css">
+        <link rel="stylesheet" href="../buttons.css">
+        <title>Bellman-Ford</title>
+    </head>
+    <body>
+        <div class="nav">
+            <a href="../index.html">
+                <button>Home</button>
+            </a>
+
+            <a href="../graphtheory.html">
+                <button>Graph Theory</button>
+            </a>
+
+            <a href="../sorting.html">
+                <button>Sorting</button>
+            </a>
+
+            <a href="../dp.html">
+                <button>Dynamic Programming</button>
+            </a>
+
+            <a href="../compiler.html">
+                <button>Java Compiler</button>
+            </a>
+        </div>
+
+        <h1>Bellman-Ford Algorithm</h1>
+
+        <div class="page-content-container">
+            <div class="page-content-text-section">
+                <h4>Description</h4>
+                <p>Given a graph in the form of an adjacency matrix, an integer representing the number of nodes
+                    in the graph, and an integer representing the starting node, will find the shortest path distance
+                    between the starting node and every other node in the graph. It is important to note that this
+                    algorithm can handle negative edge weights but not negative cycles.
+                </p>
+
+                <p>First a distance array is created. The distance array represents the current known
+                    shortest distance from the starting node to every other node where each index represents node in the graph.
+                    The distance array is first initialized to INFINITY except for the index representing the starting node which
+                    is initialized to 0.
+                </p>
+
+                <p>Then the algorithm loops through each pair of adjacent nodes (one iteration) with a shared edge and sees if those nodes'
+                    current shortest distance can be updated to a smaller value. 
+                </p>
+
+                <p>The algorithm repeats this process until an iteration makes no updates to the distance array or loops at a fixed
+                    (number of nodes - 1) number of iterations (my implementation) as this algorithm should conclude after (number of nodes - 1)
+                    iterations if it is a valid graph and there are no negative cycles.
+                </p>
+
+                <p>Note that is it common to implement a negative cycle checker by seeing if the distance array still updates after Bellman-Ford
+                    completes (number of nodes - 1) iterations.
+                </p>
+
+                <br>
+
+                <h4>Input Requirements</h4>
+                <p>Takes in three command line arguments. The first argument is an integer that represents the total number of nodes in the
+                    graph.
+                </p>
+
+                <p>The second argument is also an integer that represents which node is the starting node (please node that node 0 is
+                    not a valid node, the smallest possible value for this argument is 0). 
+                </p>
+
+                <p>The third argument is a string that represents all the edges between nodes in the form
+                    (first-node)/(second-node)/(connecting-edge-weight) with each group of three values separated by a comma.
+                </p>
+
+                <p>Note that the main method in the program converts this input into an adjacency matrix before passing that matrix
+                    into the Bellman-Ford Algorithm method.
+                </p>
+
+                <br>
+
+                <h4>Example Input and Output</h4>
+                <p><b>Input: </b>4 1 1/2/5,1/3/8,2/3/9,2/4/2,3/4/6</p>
+                <p><b>Output: </b>Shortest path between node 1 and every other node using Bellman-Ford:</p>
+                <p>Node 1	 Distance: 0</p>
+                <p>Node 2	 Distance: 5</p>
+                <p>Node 3	 Distance: 8</p>
+                <p>Node 4	 Distance: 7</p>
+
+                <br>
+
+                <h4>Time and Space Complexity</h4>
+                <p>Worse case time: <b>O(|V||E|)</b></p>
+                <p>Best case time: <b>O(|V||E|)</b></p>
+                <p>Average case time: <b>O(|V||E|)</b></p>
+                <p>Worse case space: <b>O(|V|<sup>2</sup>)</b></p>
+                <p>Best case space: <b>O(|V|<sup>2</sup>)</b></p>
+                <p>Average case space: <b>O(|V|<sup>2</sup>)</b></p>
+
+                <br>
+
+                <a href="../downloads-graphtheory/BellmanFord.java" download>
+                    <button class="download-button">Download</button>
+                </a>
+                <a href="../downloads-graphtheory/BellmanFord.java">
+                    <button class="code-text-button">Code as text</button>
+                </a>
+            </div>
+
+            <div class="page-content-compiler-section">
+                <div class="compiler" data-pym-src='https://www.jdoodle.com/plugin' data-language="java"
+                    data-version-index="4" data-libs="mavenlib1, mavenlib2">
+                    Copy and paste the Java code here.
+    
+                    Remember to put the input for the program in the text box that says "CommandLine Arguments"
+                    in the correct format based on the program you are running.
+    
+                    Don't worry about putting anything inside the "Stdin Inputs" box.
+    
+                    After that press "Execute" to run the program!
+                </div>
+            </div>
+        </div>
+
+        <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="topic-pages.css">
+        <link rel="stylesheet" href="buttons.css">
+        <title>Dynamic Programming</title>
+    </head>
+    <body>
+        <div class="nav">
+            <a href="./index.html">
+                <button>Home</button>
+            </a>
+
+            <a href="./graphtheory.html">
+                <button>Graph Theory</button>
+            </a>
+
+            <a href="./sorting.html">
+                <button>Sorting</button>
+            </a>
+
+            <a href="./dp.html">
+                <button>Dynamic Programming</button>
+            </a>
+
+            <a href="./compiler.html">
+                <button>Java Compiler</button>
+            </a>
+        </div>
+
+        <h1>Dynamic Programming</h1>
+        <h2>This page contains links to four different approaches to programming the Fibonacci Sequence from a brute-force</h2>
+        <h2>recursive to a Dynamic Programming solution with linear runtime and constant space complexity.</h2>
+        <h2>There is also a Java program that combines all four approaches into one.</h2>
+
+        <div class="topic-page-main-container">
+            <div class="topic-page-algorithm">
+                <div class="topic-page-algorithm-title">
+                    <h4>Fibonacci Recursive</h4>
+                    <div class="subsection-buttons">
+                        <a href="./pages-dp/pages-fibonacci-recursive.html">
+                            <button class="page-button">Page</button>
+                        </a>
+                        <a href="./downloads-dp/FibonacciRecursive.java" download>
+                            <button class="download-button">Download</button>
+                        </a>
+                        <a href="./downloads-dp/FibonacciRecursive.java">
+                            <button class="code-text-button">Code as text</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="topic-page-algorithm-description">
+                    <h4>Description</h4>
+                    <p>Given an integer representing which term of the Fibonacci Sequence to compute, will compute that term
+                        of Fibonacci using brute-force unoptimized recursion.
+                    </p>
+                </div>
+            </div>
+
+            <div class="topic-page-algorithm">
+                <div class="topic-page-algorithm-title">
+                    <h4>Fibonacci Memoized</h4>
+                    <div class="subsection-buttons">
+                        <a href="./pages-dp/pages-fibonacci-memoized.html">
+                            <button class="page-button">Page</button>
+                        </a>
+                        <a href="./downloads-dp/FibonacciMemoized.java" download>
+                            <button class="download-button">Download</button>
+                        </a>
+                        <a href="./downloads-dp/FibonacciMemoized.java">
+                            <button class="code-text-button">Code as text</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="topic-page-algorithm-description">
+                    <h4>Description</h4>
+                    <p>Given an integer representing which term of the Fibonacci Sequence to compute, will compute that term
+                        of Fibonacci using recursion as well as having a 1-dimensional array to store computed values.
+                    </p>
+
+                    <p>That way, if a recursive call asks to find the <b>n</b>th term of Fibonacci and that term has already been
+                        computed before, the recursive call can return the value stored in the array instead of having the repeatedly
+                        calculate <b>n</b>th term of Fibonacci again.
+                    </p>
+
+                    <p>If a recursive call asks to find the <b>n</b>th term of Fibonacci and that term has not already been
+                        computed before, then the recursive call must calculate the value recursively, however can also store the value
+                        into the array in case future recursive calls asks to find that same <b>n</b>th term of Fibonacci.
+                    </p>
+                </div>
+            </div>
+
+            <div class="topic-page-algorithm">
+                <div class="topic-page-algorithm-title">
+                    <h4>Fibonacci Dynamic Programming</h4>
+                    <div class="subsection-buttons">
+                        <a href="./pages-dp/pages-fibonacci-dp.html">
+                            <button class="page-button">Page</button>
+                        </a>
+                        <a href="./downloads-dp/FibonacciDP.java" download>
+                            <button class="download-button">Download</button>
+                        </a>
+                        <a href="./downloads-dp/FibonacciDP.java">
+                            <button class="code-text-button">Code as text</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="topic-page-algorithm-description">
+                    <h4>Description</h4>
+                    <p>Given an integer representing which term of the Fibonacci Sequence to compute, will compute that term
+                        of Fibonacci without using recursion but instead having a 1-dimensional array to store computed values.
+                    </p>
+
+                    <p>The program first creates an array of size given integer plus 1. It then initializes the value at index 0
+                        to 0 and the value at index 1 to 1. It then iterates though the array starting from index 2, calculate each
+                        index value by adding the values of the two previous indexes. 
+                    </p>
+
+                    <p>Once the value at the final index is computed, that value is then returned.
+                    </p>
+                </div>
+            </div>
+
+            <div class="topic-page-algorithm">
+                <div class="topic-page-algorithm-title">
+                    <h4>Fibonacci DP Space-Optimized</h4>
+                    <div class="subsection-buttons">
+                        <a href="./pages-dp/pages-fibonacci-dp-opti.html">
+                            <button class="page-button">Page</button>
+                        </a>
+                        <a href="./downloads-dp/FibonacciDPOptimized.java" download>
+                            <button class="download-button">Download</button>
+                        </a>
+                        <a href="./downloads-dp/FibonacciDPOptimized.java">
+                            <button class="code-text-button">Code as text</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="topic-page-algorithm-description">
+                    <h4>Description</h4>
+                    <p>Given an integer representing which term of the Fibonacci Sequence to compute, will compute that term
+                        of Fibonacci without using recursion but instead having a 1-dimensional array of size 2 to store computed values.
+                    </p>
+
+                    <p>The program first creates an array of size 2. It then initializes the value at index 0
+                        to 0 and the value at index 1 to 1. It then calculates the next term (in this case index/term 2) by adding
+                        the values at indexes 0 and 1 and stores the calculated value at index [current iteration modulo 2].
+                    </p>
+
+                    <p>This process is then repeated until the iteration where the given integer term of Fibonacci is computed. This program
+                        works because Fibonacci only relys on the previous two terms to calculate the next term. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="topic-page-algorithm">
+                <div class="topic-page-algorithm-title">
+                    <h4>All Fibonacci Approaches</h4>
+                    <div class="subsection-buttons">
+                        <a href="./pages-dp/pages-fibonacci.html">
+                            <button class="page-button">Page</button>
+                        </a>
+                        <a href="./downloads-dp/Fibonacci.java" download>
+                            <button class="download-button">Download</button>
+                        </a>
+                        <a href="./downloads-dp/Fibonacci.java">
+                            <button class="code-text-button">Code as text</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="topic-page-algorithm-description">
+                    <h4>Description</h4>
+                    <p>Given an integer representing which term of the Fibonacci Sequence to compute and an integer representing which Fibonacci
+                        computional approach to take, will compute that term of Fibonacci using the selected approach.
+                    </p>
+
+                    <p>The options for Fibonacci approaches are: brute-force recursion, memoization, standard dynamic programming,
+                        dynamic programming with space optimization.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
